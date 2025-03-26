@@ -52,7 +52,13 @@ public class Lector {
     }
 
 
-
-
-
+    @Override
+    public String toString() {
+        return "Lector{" +
+                "nombre='" + nombre + '\'' +
+                ", id=" + id +
+                ", libros=" + Arrays.toString(libros) +
+                ", edad=" + edad +
+                '}';
+    }
 }

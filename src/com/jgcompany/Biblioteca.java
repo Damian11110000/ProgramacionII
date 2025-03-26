@@ -7,6 +7,20 @@ public class Biblioteca {
     public Lector[] lector = new Lector[100];
 
 
+    public boolean AgregarLector(Lector lector){
+
+        boolean agregado = false;
+        for (int i = 0; i < this.lector.length; i++) {
+            if(this.lector[i] == null){
+                this.lector[i] = lector;
+                agregado = true;
+                break;
+            }
+        }
+
+        return agregado;
+    }
+
     public Libro obtenerLibro(String titulo) {
         for (Libro libro : libros) {
             if (libro.titulo.equals(titulo)) {
@@ -22,6 +36,10 @@ public class Biblioteca {
                 System.out.println(libros[i]);
             }
         }
+    }
+
+    public Lector[] obtenerLectores(){
+        return lector;
     }
 
     public void agregarLibro(Libro libro){

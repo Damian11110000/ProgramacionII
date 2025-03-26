@@ -44,4 +44,19 @@ public class Bibliotecario {
         biblioteca.listarLibros();
     }
 
+
+    public Lector suscribirLector(String nombre, int edad,Biblioteca biblioteca){
+        Lector lector = new Lector(nombre,edad);
+        return biblioteca.AgregarLector(lector) ? lector : null;
+    }
+
+    public void listarLectores(Biblioteca biblioteca){
+        Lector[] lectors = biblioteca.obtenerLectores();
+
+        for (Lector lector : lectors){
+            if (lector != null){
+                System.out.println(lector);
+            }
+        }
+    }
 }

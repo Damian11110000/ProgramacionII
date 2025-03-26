@@ -10,11 +10,15 @@ public class PruebaLibros {
 
 
 
-        Lector lector = new Lector("Juan",17);
+
         Biblioteca biblioteca = new Biblioteca();
         Bibliotecario bibliotecario = new Bibliotecario();
 
-        bibliotecario.agregarLibroBiblioteca("50 Sombras",
+        Lector lector =bibliotecario.suscribirLector("damian",20,biblioteca);
+
+        Lector lectorJ =bibliotecario.suscribirLector("juan",17,biblioteca);
+
+                bibliotecario.agregarLibroBiblioteca("50 Sombras",
                     "Mack","Damian","324234",true,COMEDIA,biblioteca);
 
         bibliotecario.agregarLibroBiblioteca("50 Sombras 2",
@@ -37,6 +41,7 @@ public class PruebaLibros {
 
         bibliotecario.listarLibrosBiblioteca(biblioteca);
 
+        bibliotecario.listarLectores(biblioteca);
 
     }
 }
