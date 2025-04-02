@@ -9,8 +9,6 @@ public class PruebaLibros {
 
 
 
-
-
         Biblioteca biblioteca = new Biblioteca();
         Bibliotecario bibliotecario = new Bibliotecario();
 

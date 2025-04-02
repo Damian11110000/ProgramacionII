@@ -1,7 +1,13 @@
 package com.jgcompany;
 
 
+import com.jgcompany.Persona;
+
+
+
 public class Biblioteca {
+
+    Persona persona = new Persona();
 
     public Libro[] libros = new Libro[100];
     public Lector[] lector = new Lector[100];
